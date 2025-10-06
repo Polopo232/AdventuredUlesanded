@@ -15,13 +15,20 @@ Insert into tblEmployee Values (2, 'Pam', 6500, 'Female', 'Sydney')
 
 SELECT * FROM tblEmployee
 
+--Proovin luua klastritatud indeksit
 Create Clustered Index IX_tblEmployee_Name
 ON tblEmployee (Name)
 
+--Proovin indeksit kustutada
 Drop index tblEmployee.PK__tblEmplo__3214EC07039C5E04
 
+--Proovin veel kord luua klastritatud indeksit
 Create Clustered Index IX_tblEmployee_Gender_Salary
 ON tblEmployee (Gender DESC, Salary ASC)
 
+--Loon klastrimata indeksi
 Create NonClustered Index IX_tblEmployee_Name
 ON tblEmployee (Name)
+
+--Klastritud indeks – võib olla ainult üks
+--Klastrimata indeks – võib olla tabelis nii palju kui soovite
