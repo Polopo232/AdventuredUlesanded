@@ -57,10 +57,20 @@ End
 
 SELECT EmployeeKey, dbo.fn_GetEmployee_NameById(1) AS Name FROM DimEmployee
 
-Alter Function fn_GetEmployeeNameByld @ld int)
+Alter Function fn_GetEmployee_NameById (@Id int)
 Returns nvarchar(20)
 With SchemaBinding
 as
 Begin
-Return (Select Name from dbo.tblEmployees Where Id = @Id)
+Return (Select FirstName from dbo.DimEmployee Where EmployeeKey = @Id)
 End
+
+SELECT EmployeeKey, dbo.fn_GetEmployee_NameById(1) AS Name FROM DimEmployee
+
+Create Table #PersonDetails(Id int, Name nvarchar(20))
+
+Insert into #PersonDetails Values(1, 'Mike')
+Insert into #PersonDetails Values (2, 'John')
+Insert into #PersonDetails Values (3, 'Todd')
+
+select * from #PersonDetails
