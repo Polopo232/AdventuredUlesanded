@@ -74,3 +74,6 @@ Insert into #PersonDetails Values (2, 'John')
 Insert into #PersonDetails Values (3, 'Todd')
 
 select * from #PersonDetails
+
+Select name from tempdb..sysobjects
+where name like '#PersonDetails%'
