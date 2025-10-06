@@ -45,4 +45,12 @@ BEGIN
 RETURN (SELECT FirstName FROM DimEmployee WHERE EmployeeKey = @Id);
 END
 
-SELECT * FROM fn_GetEmployee_NameById();
+SELECT EmployeeKey, dbo.fn_GetEmployee_NameById(1) AS Name FROM DimEmployee
+
+Alter Function fn_GetEmployee_NameById (@Id int)
+Returns nvarchar(20)
+With Encryption
+as
+Begin
+Return (Select FirstName from DimEmployee Where EmployeeKey = @Id)
+End
