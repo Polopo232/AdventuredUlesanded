@@ -1,7 +1,7 @@
 --Funktsioonid
 USE AdventureWorksDW2019
 
-SELECT * FROM DimEmployeeS
+SELECT * FROM DimEmployee
 
 CREATE FUNCTION fn_ILTVF_GetEmployees()
 RETURNS TABLE
@@ -89,3 +89,8 @@ Select * from #PersonDetails
 End
 
 Create Table ##EmployeeDetails(Id int, Name nvarchar(20))
+
+CREATE Index IX_tblEmployee_Salary
+ON DimEmployee (BaseRate ASC)
+
+EXECUTE sp_help DimEmployee
