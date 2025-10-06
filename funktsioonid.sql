@@ -66,31 +66,3 @@ Return (Select FirstName from dbo.DimEmployee Where EmployeeKey = @Id)
 End
 
 SELECT EmployeeKey, dbo.fn_GetEmployee_NameById(1) AS Name FROM DimEmployee
-
-Create Table #PersonDetails(Id int, Name nvarchar(20))
-
-Insert into #PersonDetails Values(1, 'Mike')
-Insert into #PersonDetails Values (2, 'John')
-Insert into #PersonDetails Values (3, 'Todd')
-
-select * from #PersonDetails
-
-Select name from tempdb..sysobjects
-where name like '#PersonDetails%'
-
-Create Procedure spCreateLocalTempTable
-as
-Begin
-Create Table #PersonDetails (Id int, Name nvarchar(20))
-Insert into #PersonDetails Values(1, 'Mike')
-Insert into #PersonDetails Values (2, 'John')
-Insert into #PersonDetails Values (3, 'Todd')
-Select * from #PersonDetails
-End
-
-Create Table ##EmployeeDetails(Id int, Name nvarchar(20))
-
-CREATE Index IX_tblEmployee_Salary
-ON DimEmployee (BaseRate ASC)
-
-EXECUTE sp_help DimEmployee
