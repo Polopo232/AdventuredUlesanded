@@ -30,5 +30,5 @@ ON tblEmployee (Gender DESC, Salary ASC)
 Create NonClustered Index IX_tblEmployee_Name
 ON tblEmployee (Name)
 
---Klastritud indeks – võib olla ainult üks
---Mitteklastriindeksi – võib olla tabelis nii palju kui soovite
+--Klastreeritud indeks – võib olla ainult üks
+--Mitteklastriindeks – võib olla tabelis nii palju kui soovite
