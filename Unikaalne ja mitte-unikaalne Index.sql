@@ -9,3 +9,6 @@ CREATE TABLE [tblEmployee]
 )
 
 EXECUTE sp_helpindex tblEmployee
+
+Insert into tblEmployee Values(1, 'Mike', 'Sandoz', 4500, 'Male', 'New York')
+Insert into tblEmployee Values(1, 'John', 'Menco', 2500, 'Male', 'London')
