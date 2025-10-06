@@ -87,3 +87,5 @@ Insert into #PersonDetails Values (2, 'John')
 Insert into #PersonDetails Values (3, 'Todd')
 Select * from #PersonDetails
 End
+
+Create Table ##EmployeeDetails(Id int, Name nvarchar(20))
