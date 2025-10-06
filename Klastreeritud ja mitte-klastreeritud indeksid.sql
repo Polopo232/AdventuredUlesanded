@@ -14,3 +14,14 @@ Insert into tblEmployee Values (5, 'Todd', 3100, 'Male', 'Toronto')
 Insert into tblEmployee Values (2, 'Pam', 6500, 'Female', 'Sydney')
 
 SELECT * FROM tblEmployee
+
+Create Clustered Index IX_tblEmployee_Name
+ON tblEmployee (Name)
+
+Drop index tblEmployee.PK__tblEmplo__3214EC07039C5E04
+
+Create Clustered Index IX_tblEmployee_Gender_Salary
+ON tblEmployee (Gender DESC, Salary ASC)
+
+Create NonClustered Index IX_tblEmployee_Name
+ON tblEmployee (Name)
