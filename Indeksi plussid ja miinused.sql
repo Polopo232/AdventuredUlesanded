@@ -14,6 +14,6 @@ Insert into tblEmployee Values (3, 'John', 'Barber', 2500, 'Male', 'Sydney')
 Insert into tblEmployee Values (4, 'Pam', 'Grove', 3500, 'Female', 'Toronto')
 Insert into tblEmployee Values (5, 'James', 'Mirch', 7500, 'Male', 'London')
 
+--Loomine uus indeks IX_tblEmployee_Salary
 Create NonClustered Index IX_tblEmployee_Salary
 On tblEmployee (Salary Asc)
-
