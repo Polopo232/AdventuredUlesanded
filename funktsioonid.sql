@@ -54,3 +54,13 @@ as
 Begin
 Return (Select FirstName from DimEmployee Where EmployeeKey = @Id)
 End
+
+SELECT EmployeeKey, dbo.fn_GetEmployee_NameById(1) AS Name FROM DimEmployee
+
+Alter Function fn_GetEmployeeNameByld @ld int)
+Returns nvarchar(20)
+With SchemaBinding
+as
+Begin
+Return (Select Name from dbo.tblEmployees Where Id = @Id)
+End
