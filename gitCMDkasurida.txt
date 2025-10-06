@@ -5,4 +5,10 @@ git config user.name "polopo232"
 git config user.gmail "nikiforovnikita08@gmail.com"
 
 git config --global --list
-----
+--------------------------
+muuduste kinnitamine
+
+git add .
+git commit -a -m ""
+
+git push
