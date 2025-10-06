@@ -2,6 +2,9 @@ Table funktsionid
 <img width="1033" height="400" alt="{581C5939-9A97-479E-A4BB-FBD44DF64898}" src="https://github.com/user-attachments/assets/1f85c927-1f62-4981-aecd-b5284ad817c6" />
 Scalar Funktsionid
 <img width="1085" height="409" alt="{A73B0060-595B-4DDB-9861-5654BA0CC3B7}" src="https://github.com/user-attachments/assets/3e312666-6316-45dd-918b-8119d2385e8f" />
+Temporary tables
+<img width="162" height="188" alt="{8AB06545-44F1-48C4-94C3-8EC475554F9C}" src="https://github.com/user-attachments/assets/472d1701-9b7c-43f0-a2a1-bd11a638e615" />
+
 
 
 **fn_ILTVF_GetEmployees()**
