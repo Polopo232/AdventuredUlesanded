@@ -1,41 +1,36 @@
 CREATE VIEW VWEmployeesByDepartment AS
-SELECT 
-    e.EmployeeKey AS Id,
-    e.FirstName, 
-	e.LastName AS Name,
-    e.Gender,
-    o.OrganizationName AS DeptName
+SELECT e.EmployeeKey AS Id, e.FirstName, e.LastName AS Name, e.Gender, o.OrganizationName AS DeptName
 FROM DimEmployee e
 JOIN DimOrganization o ON e.EmployeeKey = o.OrganizationKey;
 
 SELECT * FROM VWEmployeesByDepartment
 
-Create View vWITDepartment_Employees
-as
-Select Id, Name, Salary, Gender, DeptName
-from tblEmployee
-join tblDepartment
-on tblEmployee. Departmentld = tblDepartment.Deptld
-where tblDepartment. DeptName = 'IT'
+CREATE VIEW vWITDepartment_Employees AS
+SELECT e.EmployeeKey AS Id, e.FirstName, e.LastName AS Name, e.BaseRate, e.Gender, e.DepartmentName AS DeptName
+FROM DimEmployee e
+JOIN DimSalesTerritory d ON e.EmployeeKey = d.SalesTerritoryKey
+WHERE d.SalesTerritoryRegion = 'Canada';
 
 SELECT * FROM vWITDepartment_Employees
 
 Create View vWEmployeesNonConfidentialData
 as
-Select Id, Name, Gender, DeptName
-from tblEmployee
-join tblDepartment
-on tblEmployee. Departmentld = tblDepartment.Deptld
+Select EmployeeKey, FirstName, Gender, DepartmentName
+from DimEmployee
+join DimSalesTerritory
+on DimEmployee.EmployeeKey = DimSalesTerritory.SalesTerritoryKey
 
-SELECT * FROM vWEmployeesNonConfidentialData
+DROP VIEW vWEmployeesNonConfidentialData
+
+SELECT * FROM vWEmployeesNonConfidentialData;
 
 Create View vWEmployeesCountByDepartment
 as
-Select DeptName, COUNT(Id) as TotalEmployees
-from tblEmployee
-join tblDepartment
-on tblEmployee. Departmentld = tblDepartment.Deptld
-Group By DeptName
+Select DepartmentName, COUNT(EmployeeKey) as TotalEmployees
+from DimEmployee
+join DimSalesTerritory
+on DimEmployee. EmployeeKey = DimSalesTerritory.SalesTerritoryKey
+Group By DepartmentName
 
 SELECT * FROM vWEmployeesCountByDepartment
 
