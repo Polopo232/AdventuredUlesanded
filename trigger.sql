@@ -35,3 +35,11 @@ END
 
 DISABLE TRIGGER trMyFirstTrigger ON DATABASE
 DROP TRIGGER trMyFirstTrigger ON DATABASE
+
+CREATE TRIGGER trRenameTable
+ON DATABASE
+FOR RENAME
+AS
+BEGIN
+Print 'You just renamed something'
+END
