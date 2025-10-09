@@ -32,3 +32,6 @@ BEGIN
 Rollback
 Print 'You cannot create, alter or drop a table'
 END
+
+DISABLE TRIGGER trMyFirstTrigger ON DATABASE
+DROP TRIGGER trMyFirstTrigger ON DATABASE
