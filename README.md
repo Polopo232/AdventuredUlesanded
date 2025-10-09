@@ -13,3 +13,12 @@ Temporary tables
 <img width="238" height="382" alt="{4ED777B9-8FE0-4669-8CED-A2DA089E5D8D}" src="https://github.com/user-attachments/assets/d0b875d3-1def-46c9-8c71-2b2def657685" />
 **fn_GetEmployee_NameById()**
 <img width="155" height="380" alt="{B0430C7A-6E43-48F2-B2F7-3157CB6AA218}" src="https://github.com/user-attachments/assets/58ea7888-0333-49f0-a3cd-bd018763cd2d" />
+
+VWEmployeesByDepartment
+![alt text]({2594F193-FA63-400F-9FB0-2C90AD6FE61F}.png)
+vWITDepartment_Employees
+![alt text]({BF62E549-CD23-48FD-94C8-A404CEE1ECA1}.png)
+vWEmployeesNonConfidentialData
+![alt text]({6242E838-D983-49B3-90D4-55FAE7C38EC1}.png)
+vWEmployeesCountByDepartment
+![alt text]({57EBE8CD-26C8-4868-994B-8A897B7EA349}.png)
