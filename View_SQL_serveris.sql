@@ -18,6 +18,9 @@ Insert into tblDepartment values (2, 'Payroll')
 Insert into tblDepartment values (3,'HR')
 Insert into tblDepartment values (4, 'Admin')
 
+
+
+
 Insert into tblEmployee values (1, 'John', 5000, 'Male', 3)
 Insert into tblEmployee values (2, 'Mike', 3400, 'Male', 2)
 Insert into tblEmployee values (3, 'Pam', 6000, 'Female', 1)
