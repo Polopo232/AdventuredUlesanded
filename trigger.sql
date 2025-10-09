@@ -13,3 +13,13 @@ AS
 BEGIN
 Print 'New table created'
 END
+
+CREATE TABLE Test (Id int)
+
+ALTER TRIGGER trMyFirstTrigger
+ON Database
+FOR CREATE_TABLE, ALTER_TABLE, DROP_TABLE
+AS
+BEGIN
+Print 'A table has just been created, modified or deleted'
+END
