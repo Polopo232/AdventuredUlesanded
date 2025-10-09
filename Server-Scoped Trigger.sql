@@ -6,3 +6,12 @@ BEGIN
 ROLLBACK
 Print 'You cannot create, alter or drop a table in the current database'
 END
+
+CREATE TRIGGER tr_ServerScopeTrigger
+ON ALL SERVER
+FOR CREATE_TABLE, ALTER_TABLE, DROP_TABLE
+AS
+BEGIN
+ROLLBACK
+Print 'You cannot create, alter or drop a table in any database on the server'
+END
