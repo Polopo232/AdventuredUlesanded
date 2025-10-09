@@ -7,4 +7,9 @@ FROM FactInternetSales
 GROUP BY ProductKey
 HAVING SUM (SalesAmount) > 1000
 
+SELECT ProductKey, SUM (SalesAmount) AS TotalSales
+FROM FactInternetSales
+GROUP BY ProductKey
+WHERE SUM (SalesAmount) > 1000
+
 SELECT * FROM FactInternetSales

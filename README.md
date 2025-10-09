@@ -22,3 +22,7 @@ vWEmployeesNonConfidentialData
 ![alt text]({6242E838-D983-49B3-90D4-55FAE7C38EC1}.png)
 vWEmployeesCountByDepartment
 ![alt text]({57EBE8CD-26C8-4868-994B-8A897B7EA349}.png)
+
+![alt text]({D9588A21-C340-4E74-9967-ED334ED7A86B}.png)
+
+![alt text]({D8B43F43-EFF8-40C7-94BF-BA4871433E81}.png)
