@@ -18,4 +18,6 @@ END
 
 DISABLE TRIGGER tr_ServerScopeTrigger ON ALL SERVER
 
-ENABLE TRIGGER tr ServerScope Trigger ON ALL SERVER
+ENABLE TRIGGER tr_ServerScopeTrigger ON ALL SERVER
+
+DROP TRIGGER tr_ServerScopeTrigger ON ALL SERVER
