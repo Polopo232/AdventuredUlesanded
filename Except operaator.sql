@@ -25,3 +25,37 @@ Insert into TableB values (5, 'Sara', 'Female')
 Insert into TableB values (6, 'Pam', 'Female')
 Insert into TableB values (7, 'Rebeka', 'Female')
 Insert into TableB values (8, 'Jordan', 'Male')
+
+Select Id, Name, Gender
+From TableA
+Except
+Select Id, Name, Gender
+From TableB
+
+Create table tblEmployees
+(
+Id int identity primary key,
+Name nvarchar(100),
+Gender nvarchar(10),
+Salary int
+)
+
+Insert into tblEmployees values ('Mark', 'Male', 52000)
+Insert into tblEmployees values ('Mary', 'Female', 55000)
+Insert into tblEmployees values ('Steve', 'Male', 45000)
+Insert into tblEmployees values ('John', 'Male', 40000)
+Insert into tblEmployees values ('Sara', 'Female', 48000)
+Insert into tblEmployees values ('Pam', 'Female', 60000)
+Insert into tblEmployees values ('Tom', 'Male', 58000)
+Insert into tblEmployees values ('George', 'Male', 65000)
+Insert into tblEmployees values ('Tina', 'Female', 67000)
+Insert into tblEmployees values ('Ben', 'Male', 80000)
+
+Select Id, Name, Gender, Salary
+From tblEmployees
+Where Salary >= 50000
+Except
+Select Id, Name, Gender, Salary
+From tblEmployees
+Where Salary >= 60000
+order By Name
