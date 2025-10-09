@@ -19,3 +19,6 @@ join tblDepartment
 on tblEmployee.Departmentld = tblDepartment.Deptld
 
 SELECT * FROM vwEmployeeDetailsByDepartment
+
+Update vwEmployeeDetailsByDepartment
+set DeptName='IT' where Name = 'John'
