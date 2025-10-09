@@ -15,3 +15,5 @@ BEGIN
 ROLLBACK
 Print 'You cannot create, alter or drop a table in any database on the server'
 END
+
+DISABLE TRIGGER tr_ServerScopeTrigger ON ALL SERVER
