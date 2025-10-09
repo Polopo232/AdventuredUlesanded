@@ -5,3 +5,11 @@ AS
 BEGIN
 -- Trigger Body
 END
+
+CREATE TRIGGER trMyFirstTrigger
+ON Database
+FOR CREATE_TABLE
+AS
+BEGIN
+Print 'New table created'
+END
