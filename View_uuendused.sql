@@ -4,4 +4,3 @@ Select Id, Name, Gender, Departmentld
 from tblEmployee
 
 SELECT * FROM vWEmployeesDataExceptSalary
-
